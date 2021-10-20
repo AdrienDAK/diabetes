@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction[0] == 0 %}
+                <img src="{{url_for('static', filename='images/result0.png')}}" class="img-thumbnail" />
+            {% endif %}
+        </div>
+    </div>
+        
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction[0] == 1 %}
+                <img src="{{url_for('static', filename='images/result1.png')}}" class="img-thumbnail" />
+            {% endif %}
+        </div>
+    </div>
+
+
+{% endblock %}

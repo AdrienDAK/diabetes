@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <!-- Starts image section -->
+    <div class="row justify-content-md-center mb-4">
+        <h2 class='text-primary'>Predict the onset of diabetes within 5 years in Pima Indians given medical details</h2>
+    </div>
+
+      <div align="center" class="row">
+        <div class="column">
+          <img src="{{url_for('static', filename='images/diabete3.jpg')}}" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{{url_for('static', filename='images/diabete2.jpg')}}" style="width:52%">
+        </div>
+
+      </div>
+    
+      
+
+     <p><strong> </strong></p>
+     <p><strong>Kindly fill in the below form</strong></p>
+
+    <!-- Ends image section -->
+    
+    <!-- Starts form section -->
+    <div class="form-container ">
+        <form class="form-horizontal" action = "/result/" method="post">
+        
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="nbre_pregnant">Number pregnant (0-17):</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="nbre_pregnant" name="nbre_pregnant">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+            
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="plasma">Plasma 40-200:</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="plasma" name="plasma">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="pressure">Diastolic blood pressure (mm Hg). 35-120:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="pressure" name="pressure">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+            
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="thickness">Triceps skinfold thickness (mm)….-90:</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="thickness" name="thickness">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="insulin">2-Hour serum insulin (mu U/ml). … -300:</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="insulin" name="insulin">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="mass_index">Body mass index (weight in kg/(height in m)^2) … - 50:</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="mass_index" name="mass_index">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+            
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="pedigree">Diabetes pedigree function. 0.078 - 2.42</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="pedigree" name="pedigree">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+
+            <div align="center" class="form-group row">
+              <label class="control-label col-sm-2" for="age">Age (years). 21-81:</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="age" name="age">
+                <p><strong> </strong></p>
+              </div>
+            </div>
+            
+            <div align="center" class="form-group row"> 
+            <label class="control-label col-sm-2" for="">&nbsp;</label>                
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+            </div>
+          </form>
+        <!-- Ends form section -->
+        
+        
+    </div>
+
+
+{% endblock %}
